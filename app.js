@@ -67,14 +67,15 @@ const app7 = new Vue({
     ],
   },
 });
+
 const app8 = new Vue({
-    el: '#app-8',
-    data: {
-        workoutRoutine: [
-            {id: 0, text: 'Run a mile'},
-            {id: 1, text: 'Lift weights'},
-            {id: 2, text: 'Situps'},
-            {id: 3, text: 'Pushups'},
-        ]
-    }
-})
+  el: '#app-8',
+  data: {
+    workoutRoutine: [
+      { id: 0, text: 'Run a mile' },
+      { id: 1, text: 'Lift weights' },
+      { id: 2, text: 'Situps' },
+      { id: 3, text: 'Pushups' },
+    ],
+  },
+});
