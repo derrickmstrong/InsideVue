@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Vue</title>
+  </head>
+  <body>
+    <!-- New Vue instance -->
+    <div id="app-1">{{ message }}</div>
+    <!-- Bind -->
+    <div id="app-2">
+      <span :title="title">Hello again</span>
+    </div>
+    <!-- Conditionals -->
+    <div id="app-3">
+      <span v-if="seen">Now you see me</span>
+    </div>
+    <!-- For Loop -->
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">{{todo.item}}</li>
+      </ol>
+    </div>
+    <!-- Handling User Input -->
+    <div id="app-5">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <!-- Two-way Data Binding -->
+    <div id="app-6">
+      <p>{{ message }}</p>
+      <input v-model="message" placeholder="Enter your name" />
+    </div>
+    <!-- Composing with Components -->
+    <div id="app-7">
+      <ol>
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></todo-item>
+      </ol>
+    </div>
+
+    <div id="app-8">
+        <ul>
+            <todo-item
+            v-for="item in workoutRoutine"
+            v-bind:todo="item"
+            v-bind:key="item.id">
+            </todo-item>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
